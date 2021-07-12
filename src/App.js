@@ -6,6 +6,7 @@ function App() {
   useEffect(() => {
     (async function () {
       const { text } = await( await fetch(`https://crudfunctionapp.azurewebsites.net/api/listTodos`)).json();
+      console.log("data",text);
       setData(text);
     })();
   });
